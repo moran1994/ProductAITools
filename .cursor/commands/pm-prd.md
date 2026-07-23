@@ -8,7 +8,7 @@ argument-hint: "<功能或问题陈述>"
 遵循 **pm-workflow**，启动 `prd`：
 
 ```bash
-python3 .cursor/skill-os/scripts/flow_cli.py start prd --topic "$ARGUMENTS" --force
+python3 ~/.cursor/skill-os/scripts/flow_cli.py start prd --topic "$ARGUMENTS" --force
 ```
 
 - 中文 B2B/SaaS 风格 → `write-prd`

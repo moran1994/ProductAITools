@@ -10,7 +10,7 @@ argument-hint: "<产品或功能想法> [--stage existing|new]"
 3. 启动：
 
 ```bash
-python3 .cursor/skill-os/scripts/flow_cli.py start discover --topic "$ARGUMENTS" --stage <existing|new> --force
+python3 ~/.cursor/skill-os/scripts/flow_cli.py start discover --topic "$ARGUMENTS" --stage <existing|new> --force
 ```
 
 4. 从 `context` 节点开始，逐步：ideate → assumptions → prioritize → experiments → plan

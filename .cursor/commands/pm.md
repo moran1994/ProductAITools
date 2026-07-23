@@ -9,7 +9,7 @@ argument-hint: "[可选：一句话描述当前产品/问题]"
 2. 启动流程：
 
 ```bash
-python3 .cursor/skill-os/scripts/flow_cli.py start pm-lifecycle --topic "$ARGUMENTS" --force
+python3 ~/.cursor/skill-os/scripts/flow_cli.py start pm-lifecycle --topic "$ARGUMENTS" --force
 ```
 
 3. 展示阶段选项（发现 / 战略 / 研究 / PRD / 上市 / 执行 / 数据 / 发版）

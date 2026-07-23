@@ -21,6 +21,6 @@ argument-hint: "[list|search <kw>|apply <skill-id>|sync]"
 3. 按 skill 执行；若该 skill 属于某 flow 的中间节点，提示「更推荐从 `/pm-*` 流程进入」
 
 ## sync
-运行：`python3 .cursor/skill-os/scripts/sync_catalog.py` 并汇报新计数
+运行：`python3 ~/.cursor/skill-os/scripts/sync_catalog.py` 并汇报新计数
 
 若用户目标是完整 PM 过程，改用 `pm-workflow` 与 `/pm`。
