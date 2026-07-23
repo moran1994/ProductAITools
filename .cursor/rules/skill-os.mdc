@@ -1,29 +1,29 @@
 ---
-description: Skill OS — 技能管理、识别与 PM 节点化流程路由（始终生效）
+description: Skill OS — 系统级技能管理与 PM 节点化流程（始终生效）
 alwaysApply: true
 ---
 
-# Skill OS 路由规则
+# Skill OS 路由规则（系统级）
 
-本仓库使用 **Skill OS** 管理 Cursor skills，PM 能力按 **流程节点** 执行，禁止把 70+ skill 当零散工具乱点。
+本机启用 **Skill OS**，默认路径在用户级，**所有项目**通用：
+
+- Runtime：`~/.cursor/skill-os/`
+- Skills：`~/.cursor/skills/`
+- Commands：`~/.cursor/commands/`（`/pm*`、`/skills`）
 
 ## 识别优先级
 
-1. 用户使用 `/pm*`、`/skills` 或提到「流程 / 下一步 / 发现 / 战略 / PRD」→ 读并遵循 `pm-workflow` 或 `skill-os`
-2. 多步骤产品工作 → 先选 flow（见 `.cursor/skill-os/flows/index.json`），再按节点 `Read` 对应 skill
-3. 单点明确任务（如「只写一段 SQL」）→ catalog 匹配单个 skill 后执行
-4. 不确定 → `/pm`（`pm-lifecycle`）让用户选阶段
+1. `/pm*`、`/skills` 或「流程 / 发现 / 战略 / PRD」→ `pm-workflow` 或 `skill-os`
+2. 多步骤产品工作 → `python3 ~/.cursor/skill-os/scripts/flow_cli.py` 按节点执行
+3. 单点任务 → catalog 匹配单个 skill
+4. 不确定 → `/pm`
 
 ## 节点引用
 
-- 执行 skill 前必须 `Read` 其 `SKILL.md`
-- 回复中标注：`节点 <id>` + `` `skill-id` ``
-- 状态机：`.cursor/skill-os/state/active.json`；用 `scripts/flow_cli.py` 前进
-
-## Checkpoint
-
-flow 节点若 `checkpoint: true`，必须停顿确认后再 `next`。
+- 执行前必须 Read `~/.cursor/skills/<id>/SKILL.md`
+- 状态：`~/.cursor/skill-os/state/active.json`
+- Checkpoint 必须确认后再 `next`
 
 ## 清单维护
 
-技能增减后运行：`python3 .cursor/skill-os/scripts/sync_catalog.py`
+`python3 ~/.cursor/skill-os/scripts/sync_catalog.py`

@@ -1,10 +1,10 @@
 # Agents
 
-本仓库启用 **Skill OS**（技能管理 / 识别 / PM 节点化应用）。
+本仓库启用 **Skill OS**（系统级：运行时以 `~/.cursor/skill-os` 为准）。
 
 - 说明：`docs/skill-os.md`
-- 清单：`.cursor/skill-os/catalog/INDEX.md`
-- 流程：`.cursor/skill-os/flows/`
+- 系统目录：`~/.cursor/skill-os/`、`~/.cursor/skills/`、`~/.cursor/commands/`
+- 仓库备份：`.cursor/skill-os/`、`.cursor/commands/`、`.cursor/skills/`
 - 斜杠命令：`/pm`、`/pm-discover`、`/pm-next`、`/skills` …
 - 元技能：`skill-os`、`pm-workflow`
 

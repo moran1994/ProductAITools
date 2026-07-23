@@ -1,93 +1,54 @@
-# Skill OS
+# Skill OS（系统级）
 
-把 Cursor 里零散的 Agent Skills，收成一套可管理、可识别、可按节点执行的系统——尤其适合 PM 工作流。
+把 Cursor Agent Skills 做成可管理、可识别、可按节点执行的系统。默认安装在用户目录，**任意项目**可用。
 
-## 你现在拥有什么
+## 系统级 vs 项目级
 
-| 来源 | 数量 | 说明 |
+| 层级 | 路径 | 作用 |
 |------|------|------|
-| 个人 Skills（`~/.cursor/skills`） | ~70 | 含 pm-skills 全量 + 本地 write-prd / skill-creator |
-| Cursor 内置 | ~19 | `~/.cursor/skills-cursor` |
-| 插件 Skills | ~19 | ChatPRD / Figma / docs-canvas 等 |
+| **系统级（默认）** | `~/.cursor/skills`、`~/.cursor/commands`、`~/.cursor/skill-os` | 跨项目；技能 / 命令 / 流程状态 |
+| **项目级（可选）** | 仓库 `.cursor/` | 版本备份、团队共享；运行时仍优先 `~/.cursor` |
+| **用户规则** | Cursor Settings → Rules | 让 Agent 在所有项目自动按流程路由 |
+| **Canvas** | 各工作区 `~/.cursor/projects/<ws>/canvases/` | 可视化仅当前工作区（Cursor 限制） |
 
-完整清单：[.cursor/skill-os/catalog/INDEX.md](../.cursor/skill-os/catalog/INDEX.md)
+## 已安装内容
 
-### 个人 Skills 按域
-
-| 域 | 数量 |
-|----|------|
-| 产品发现 | 13 |
-| 产品战略 | 12 |
-| 市场研究 | 7 |
-| 数据分析 | 3 |
-| Go-to-Market | 6 |
-| 营销增长 | 5 |
-| 执行交付 | 16 |
-| AI Shipping | 2 |
-| PM 工具箱 | 4 |
-| 本地 PRD / 元技能 | 2+ |
-
-## 架构
-
-```
-意图 → skill-os 识别
-         ├─ 单点任务 → 匹配 catalog → Read SKILL.md → 执行
-         └─ PM 多步骤 → pm-workflow
-                          → flows/*.flow.json 节点图
-                          → 每节点引用 skill
-                          → checkpoint → flow_cli next
-                          → 产物 markdown
-```
-
-### 与 Cursor 的结合点
-
-| 机制 | 作用 |
+| 来源 | 位置 |
 |------|------|
-| `.cursor/skills/skill-os` + `pm-workflow` | Agent 自动/按需加载的元技能 |
-| `.cursor/commands/pm*.md` `/skills` | 斜杠命令触发 |
-| `.cursor/rules/skill-os.mdc` | 始终提醒按流程路由 |
-| `.cursor/skill-os/*` | 目录、流程图、状态、CLI |
-| `~/.cursor/skills/*` | 实际 skill 正文 |
-| `~/.cursor/skill-os/*` | 个人级镜像（跨项目） |
+| 70+ PM skills | `~/.cursor/skills/` |
+| `/pm*` `/skills` 命令 | `~/.cursor/commands/` |
+| 流程图 + CLI + 状态 | `~/.cursor/skill-os/` |
+| 元技能 | `skill-os`、`pm-workflow` |
 
-## 怎么用
+## 怎么用（任意项目）
 
-| 命令 | 作用 |
-|------|------|
-| `/skills` | 列出 / 搜索 / 应用 / 同步 |
-| `/pm` | 生命周期总入口 |
-| `/pm-discover` | 发现流程 |
-| `/pm-strategy` | 战略 Canvas |
-| `/pm-prd` | PRD 流程 |
-| `/pm-interview` | 访谈 |
-| `/pm-launch` | GTM |
-| `/pm-execute` | OKR/Sprint/… |
-| `/pm-research` | 研究 |
-| `/pm-analytics` | 数据 |
-| `/pm-ship` | 发版检查 |
-| `/pm-next` | 下一步 |
-| `/pm-status` | 当前状态 |
+新开 Agent 对话后：
 
-自然语言也可以：「按发现流程帮我验证这个想法」——Agent 应走 `pm-workflow`。
-
-## 节点示例（discover）
-
+```text
+/pm
+/pm-discover 你的产品想法
+/pm-next
+/pm-status
+/skills
 ```
-context (gate)
-  → ideate (brainstorm-ideas-*)
-  → assumptions (identify-assumptions-*)
-  → prioritize (prioritize-assumptions)
-  → experiments (brainstorm-experiments-*)
-  → plan (compose discovery-plan.md)
-  → handoff (router → prd / interview / metrics …)
+
+CLI：
+
+```bash
+python3 ~/.cursor/skill-os/scripts/flow_cli.py list
+python3 ~/.cursor/skill-os/scripts/flow_cli.py start discover --topic "..." --stage new --force
+python3 ~/.cursor/skill-os/scripts/flow_cli.py next --note "..."
 ```
+
+## 启用「全项目自动路由」
+
+到 **Cursor Settings → Rules → User Rules**，添加一条指向 Skill OS 的规则（或让 Agent 用 `cursor_dialog` 写入）。有了用户规则后，即使在没有本仓库的项目里，也会优先走 `/pm*` 节点流程。
 
 ## 维护
 
 ```bash
-python3 .cursor/skill-os/scripts/sync_catalog.py
-python3 .cursor/skill-os/scripts/flow_cli.py list
-python3 .cursor/skill-os/scripts/flow_cli.py status
+python3 ~/.cursor/skill-os/scripts/sync_catalog.py
+# 从本仓库同步最新 flows/commands 到系统：
+# cp -R .cursor/skill-os/flows/* ~/.cursor/skill-os/flows/
+# cp .cursor/commands/*.md ~/.cursor/commands/
 ```
-
-新增 flow：在 `.cursor/skill-os/flows/` 增加 `*.flow.json`，并更新 `index.json`；可选加对应 `.cursor/commands/pm-*.md`。

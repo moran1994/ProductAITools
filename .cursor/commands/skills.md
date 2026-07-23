@@ -8,7 +8,7 @@ argument-hint: "[list|search <kw>|apply <skill-id>|sync]"
 按参数处理：
 
 ## list（默认）
-1. 读取 `.cursor/skill-os/catalog/INDEX.md`（没有则 `~/.cursor/skill-os/catalog/`）
+1. 读取 `~/~/.cursor/skill-os/catalog/INDEX.md`（没有则 `~/~/.cursor/skill-os/catalog/`）
 2. 按域摘要展示个人 skills 数量；询问用户要展开哪一域
 3. 提醒：多步骤 PM 工作请用 `/pm`，不要零散点 skill
 
