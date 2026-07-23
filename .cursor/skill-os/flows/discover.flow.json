@@ -1,0 +1,118 @@
+{
+  "id": "discover",
+  "name": "产品发现全流程",
+  "domain": "pm-product-discovery",
+  "command": "pm-discover",
+  "description": "从 ideation → 假设 → 优先级 → 实验，节点化执行",
+  "entry": "context",
+  "vars": {
+    "product_stage": "existing|new"
+  },
+  "nodes": {
+    "context": {
+      "type": "gate",
+      "title": "确认发现上下文",
+      "ask": [
+        "探索对象是什么？",
+        "已有产品还是新产品？",
+        "已有哪些证据？",
+        "要支撑什么决策？"
+      ],
+      "outputs": [
+        "topic",
+        "product_stage",
+        "known_evidence"
+      ],
+      "next": "ideate",
+      "checkpoint": true
+    },
+    "ideate": {
+      "type": "skill",
+      "title": "发散 ideation",
+      "skill_by": {
+        "when": "product_stage",
+        "map": {
+          "existing": "brainstorm-ideas-existing",
+          "new": "brainstorm-ideas-new"
+        }
+      },
+      "checkpoint": true,
+      "checkpoint_prompt": "选出 3–5 个想法进入假设压力测试，或全部带上。",
+      "outputs": [
+        "selected_ideas"
+      ],
+      "next": "assumptions"
+    },
+    "assumptions": {
+      "type": "skill",
+      "title": "识别风险假设",
+      "skill_by": {
+        "when": "product_stage",
+        "map": {
+          "existing": "identify-assumptions-existing",
+          "new": "identify-assumptions-new"
+        }
+      },
+      "outputs": [
+        "assumptions"
+      ],
+      "next": "prioritize"
+    },
+    "prioritize": {
+      "type": "skill",
+      "title": "假设优先级（Impact × Risk）",
+      "skill": "prioritize-assumptions",
+      "checkpoint": true,
+      "checkpoint_prompt": "确认最关键假设后再设计实验。",
+      "outputs": [
+        "priority_assumptions"
+      ],
+      "next": "experiments"
+    },
+    "experiments": {
+      "type": "skill",
+      "title": "设计验证实验",
+      "skill_by": {
+        "when": "product_stage",
+        "map": {
+          "existing": "brainstorm-experiments-existing",
+          "new": "brainstorm-experiments-new"
+        }
+      },
+      "outputs": [
+        "experiments"
+      ],
+      "next": "plan"
+    },
+    "plan": {
+      "type": "compose",
+      "title": "输出 Discovery Plan",
+      "artifact": "discovery-plan.md",
+      "template": "discovery_plan",
+      "next": "handoff"
+    },
+    "handoff": {
+      "type": "router",
+      "title": "推荐下一步流程",
+      "options": [
+        {
+          "label": "写 PRD",
+          "flow": "prd"
+        },
+        {
+          "label": "访谈脚本",
+          "flow": "interview"
+        },
+        {
+          "label": "指标看板",
+          "node_skill": "metrics-dashboard"
+        },
+        {
+          "label": "机会解决方案树",
+          "node_skill": "opportunity-solution-tree"
+        }
+      ],
+      "terminal": true
+    }
+  }
+}

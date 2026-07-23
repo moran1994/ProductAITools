@@ -1,0 +1,80 @@
+{
+  "id": "prd",
+  "name": "PRD 写作与压力测试",
+  "domain": "pm-execution",
+  "command": "pm-prd",
+  "description": "上下文 → 写 PRD →（可选）红队/预演 → 用户故事",
+  "entry": "context",
+  "nodes": {
+    "context": {
+      "type": "gate",
+      "title": "澄清问题与范围",
+      "ask": [
+        "用户问题？",
+        "目标用户？",
+        "成功指标？",
+        "约束？",
+        "偏好完整方案还是分阶段？"
+      ],
+      "next": "draft",
+      "checkpoint": true
+    },
+    "draft": {
+      "type": "skill",
+      "title": "起草 PRD",
+      "skill": "create-prd",
+      "alt_skills": [
+        "write-prd"
+      ],
+      "note": "英文 8 段模板用 create-prd；中文 B2B/SaaS 风格用 write-prd（本地）。询问用户偏好。",
+      "checkpoint": true,
+      "next": "stress"
+    },
+    "stress": {
+      "type": "choice",
+      "title": "是否压力测试？",
+      "options": [
+        {
+          "label": "红队挑战假设",
+          "next": "red_team"
+        },
+        {
+          "label": "预演失败（pre-mortem）",
+          "next": "premortem"
+        },
+        {
+          "label": "跳过，拆用户故事",
+          "next": "stories"
+        }
+      ]
+    },
+    "red_team": {
+      "type": "skill",
+      "title": "Strategy Red Team",
+      "skill": "strategy-red-team",
+      "next": "stories"
+    },
+    "premortem": {
+      "type": "skill",
+      "title": "Pre-mortem",
+      "skill": "pre-mortem",
+      "next": "stories"
+    },
+    "stories": {
+      "type": "skill",
+      "title": "拆用户故事",
+      "skill": "user-stories",
+      "alt_skills": [
+        "job-stories",
+        "wwas"
+      ],
+      "next": "done"
+    },
+    "done": {
+      "type": "compose",
+      "title": "归档 PRD + Stories",
+      "artifact": "prd-pack.md",
+      "terminal": true
+    }
+  }
+}

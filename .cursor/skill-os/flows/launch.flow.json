@@ -1,0 +1,61 @@
+{
+  "id": "launch",
+  "name": "上市 / GTM",
+  "domain": "pm-go-to-market",
+  "command": "pm-launch",
+  "entry": "context",
+  "nodes": {
+    "context": {
+      "type": "gate",
+      "title": "上市上下文",
+      "ask": [
+        "产品？",
+        "目标市场？",
+        "时间表？"
+      ],
+      "next": "icp",
+      "checkpoint": true
+    },
+    "icp": {
+      "type": "skill",
+      "title": "ICP",
+      "skill": "ideal-customer-profile",
+      "next": "beachhead"
+    },
+    "beachhead": {
+      "type": "skill",
+      "title": "Beachhead 细分",
+      "skill": "beachhead-segment",
+      "checkpoint": true,
+      "next": "gtm"
+    },
+    "gtm": {
+      "type": "skill",
+      "title": "GTM 策略",
+      "skill": "gtm-strategy",
+      "next": "motions"
+    },
+    "motions": {
+      "type": "skill",
+      "title": "增长动作 / Motions",
+      "skill": "gtm-motions",
+      "alt_skills": [
+        "growth-loops"
+      ],
+      "next": "battlecard"
+    },
+    "battlecard": {
+      "type": "skill",
+      "title": "竞品作战卡（可选）",
+      "skill": "competitive-battlecard",
+      "optional": true,
+      "next": "pack"
+    },
+    "pack": {
+      "type": "compose",
+      "title": "输出 Launch Pack",
+      "artifact": "launch-pack.md",
+      "terminal": true
+    }
+  }
+}
