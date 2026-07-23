@@ -1,0 +1,55 @@
+{
+  "id": "analytics",
+  "name": "数据分析",
+  "domain": "pm-data-analytics",
+  "command": "pm-analytics",
+  "entry": "mode",
+  "nodes": {
+    "mode": {
+      "type": "choice",
+      "title": "分析类型",
+      "options": [
+        {
+          "label": "A/B 测试解读",
+          "next": "ab"
+        },
+        {
+          "label": "Cohort 分析",
+          "next": "cohort"
+        },
+        {
+          "label": "写 SQL",
+          "next": "sql"
+        },
+        {
+          "label": "北极星指标",
+          "next": "nsm"
+        }
+      ]
+    },
+    "ab": {
+      "type": "skill",
+      "skill": "ab-test-analysis",
+      "title": "A/B",
+      "terminal": true
+    },
+    "cohort": {
+      "type": "skill",
+      "skill": "cohort-analysis",
+      "title": "Cohort",
+      "terminal": true
+    },
+    "sql": {
+      "type": "skill",
+      "skill": "sql-queries",
+      "title": "SQL",
+      "terminal": true
+    },
+    "nsm": {
+      "type": "skill",
+      "skill": "north-star-metric",
+      "title": "North Star",
+      "terminal": true
+    }
+  }
+}

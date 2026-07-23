@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "flows": [
+    {
+      "id": "discover",
+      "name": "产品发现全流程",
+      "domain": "pm-product-discovery",
+      "command": "pm-discover",
+      "entry": "context",
+      "file": ".cursor/skill-os/flows/discover.flow.json",
+      "node_count": 7
+    },
+    {
+      "id": "strategy",
+      "name": "产品战略 Canvas",
+      "domain": "pm-product-strategy",
+      "command": "pm-strategy",
+      "entry": "context",
+      "file": ".cursor/skill-os/flows/strategy.flow.json",
+      "node_count": 5
+    },
+    {
+      "id": "prd",
+      "name": "PRD 写作与压力测试",
+      "domain": "pm-execution",
+      "command": "pm-prd",
+      "entry": "context",
+      "file": ".cursor/skill-os/flows/prd.flow.json",
+      "node_count": 7
+    },
+    {
+      "id": "interview",
+      "name": "用户访谈闭环",
+      "domain": "pm-product-discovery",
+      "command": "pm-interview",
+      "entry": "mode",
+      "file": ".cursor/skill-os/flows/interview.flow.json",
+      "node_count": 4
+    },
+    {
+      "id": "launch",
+      "name": "上市 / GTM",
+      "domain": "pm-go-to-market",
+      "command": "pm-launch",
+      "entry": "context",
+      "file": ".cursor/skill-os/flows/launch.flow.json",
+      "node_count": 7
+    },
+    {
+      "id": "execution",
+      "name": "执行交付（OKR → Sprint → Retro）",
+      "domain": "pm-execution",
+      "command": "pm-execute",
+      "entry": "mode",
+      "file": ".cursor/skill-os/flows/execution.flow.json",
+      "node_count": 9
+    },
+    {
+      "id": "research",
+      "name": "市场与用户研究",
+      "domain": "pm-market-research",
+      "command": "pm-research",
+      "entry": "mode",
+      "file": ".cursor/skill-os/flows/research.flow.json",
+      "node_count": 5
+    },
+    {
+      "id": "analytics",
+      "name": "数据分析",
+      "domain": "pm-data-analytics",
+      "command": "pm-analytics",
+      "entry": "mode",
+      "file": ".cursor/skill-os/flows/analytics.flow.json",
+      "node_count": 5
+    },
+    {
+      "id": "ship",
+      "name": "AI 产品发版检查",
+      "domain": "pm-ai-shipping",
+      "command": "pm-ship",
+      "entry": "check",
+      "file": ".cursor/skill-os/flows/ship.flow.json",
+      "node_count": 3
+    },
+    {
+      "id": "pm-lifecycle",
+      "name": "PM 全生命周期（流程编排入口）",
+      "domain": "local-meta",
+      "command": "pm",
+      "entry": "stage",
+      "file": ".cursor/skill-os/flows/pm-lifecycle.flow.json",
+      "node_count": 1
+    }
+  ]
+}

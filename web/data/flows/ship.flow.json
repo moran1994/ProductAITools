@@ -1,0 +1,27 @@
+{
+  "id": "ship",
+  "name": "AI 产品发版检查",
+  "domain": "pm-ai-shipping",
+  "command": "pm-ship",
+  "entry": "check",
+  "nodes": {
+    "check": {
+      "type": "skill",
+      "skill": "intended-vs-implemented",
+      "title": "意图 vs 实现",
+      "next": "artifacts"
+    },
+    "artifacts": {
+      "type": "skill",
+      "skill": "shipping-artifacts",
+      "title": "发版文档集",
+      "next": "tests"
+    },
+    "tests": {
+      "type": "skill",
+      "skill": "test-scenarios",
+      "title": "测试场景",
+      "terminal": true
+    }
+  }
+}

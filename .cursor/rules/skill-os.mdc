@@ -1,11 +1,11 @@
 ---
-description: Skill OS — 系统级技能管理与 PM 节点化流程（始终生效）
+description: 产品经理AI空间站 — 系统级技能管理与 PM 节点化流程（始终生效）
 alwaysApply: true
 ---
 
-# Skill OS 路由规则（系统级）
+# 产品经理AI空间站 路由规则（系统级）
 
-本机启用 **Skill OS**，默认路径在用户级，**所有项目**通用：
+本机启用 **产品经理AI空间站**（Skill OS），默认路径在用户级，**所有项目**通用：
 
 - Runtime：`~/.cursor/skill-os/`
 - Skills：`~/.cursor/skills/`

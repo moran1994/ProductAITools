@@ -1,14 +1,14 @@
 ---
-description: Skill OS 总控 — 列出技能、识别意图、路由到 PM 流程或单 skill
+description: 产品经理AI空间站总控 — 列出技能、识别意图、路由到 PM 流程或单 skill
 argument-hint: "[list|search <kw>|apply <skill-id>|sync]"
 ---
 
-# /skills — Skill OS
+# /skills — 产品经理AI空间站
 
 按参数处理：
 
 ## list（默认）
-1. 读取 `~/~/.cursor/skill-os/catalog/INDEX.md`（没有则 `~/~/.cursor/skill-os/catalog/`）
+1. 读取 `~/.cursor/skill-os/catalog/INDEX.md`
 2. 按域摘要展示个人 skills 数量；询问用户要展开哪一域
 3. 提醒：多步骤 PM 工作请用 `/pm`，不要零散点 skill
 

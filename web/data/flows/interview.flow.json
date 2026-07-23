@@ -1,0 +1,54 @@
+{
+  "id": "interview",
+  "name": "用户访谈闭环",
+  "domain": "pm-product-discovery",
+  "command": "pm-interview",
+  "entry": "mode",
+  "nodes": {
+    "mode": {
+      "type": "choice",
+      "title": "准备脚本 or 总结访谈？",
+      "options": [
+        {
+          "label": "准备访谈脚本",
+          "next": "script"
+        },
+        {
+          "label": "总结访谈记录",
+          "next": "summary"
+        }
+      ]
+    },
+    "script": {
+      "type": "skill",
+      "title": "访谈脚本",
+      "skill": "interview-script",
+      "terminal": true
+    },
+    "summary": {
+      "type": "skill",
+      "title": "访谈总结",
+      "skill": "summarize-interview",
+      "next": "synth"
+    },
+    "synth": {
+      "type": "router",
+      "title": "合成下一步",
+      "terminal": true,
+      "options": [
+        {
+          "label": "用户画像",
+          "node_skill": "user-personas"
+        },
+        {
+          "label": "旅程图",
+          "node_skill": "customer-journey-map"
+        },
+        {
+          "label": "回到 Discovery",
+          "flow": "discover"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "strategy",
+  "name": "产品战略 Canvas",
+  "domain": "pm-product-strategy",
+  "command": "pm-strategy",
+  "description": "9 段 Strategy Canvas：愿景 → 细分 → 价值 → 权衡 → 指标 → 增长 → 能力 → 护城河",
+  "entry": "context",
+  "nodes": {
+    "context": {
+      "type": "gate",
+      "title": "理解产品与触发原因",
+      "ask": [
+        "产品做什么？给谁用？",
+        "阶段？",
+        "商业模式？",
+        "为何现在要做战略？"
+      ],
+      "next": "vision",
+      "checkpoint": true
+    },
+    "vision": {
+      "type": "skill",
+      "title": "产品愿景",
+      "skill": "product-vision",
+      "next": "canvas"
+    },
+    "canvas": {
+      "type": "skill",
+      "title": "Strategy Canvas 9 段",
+      "skill": "product-strategy",
+      "checkpoint": true,
+      "next": "doc"
+    },
+    "doc": {
+      "type": "compose",
+      "title": "输出战略文档",
+      "artifact": "product-strategy.md",
+      "next": "handoff"
+    },
+    "handoff": {
+      "type": "router",
+      "title": "下一步",
+      "terminal": true,
+      "options": [
+        {
+          "label": "商业模式",
+          "flow": "business-model"
+        },
+        {
+          "label": "宏观扫描",
+          "flow": "market-scan"
+        },
+        {
+          "label": "OKR",
+          "node_skill": "brainstorm-okrs"
+        },
+        {
+          "label": "路线图",
+          "node_skill": "outcome-roadmap"
+        }
+      ]
+    }
+  }
+}

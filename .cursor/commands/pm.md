@@ -1,9 +1,9 @@
 ---
-description: PM 全生命周期入口 — 按阶段选择节点化流程
+description: 产品经理AI空间站入口 — 按阶段选择节点化流程
 argument-hint: "[可选：一句话描述当前产品/问题]"
 ---
 
-# /pm — PM Lifecycle
+# /pm — 产品经理AI空间站
 
 1. 加载并遵循 **pm-workflow** skill
 2. 启动流程：

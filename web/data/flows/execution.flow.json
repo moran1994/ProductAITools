@@ -1,0 +1,94 @@
+{
+  "id": "execution",
+  "name": "执行交付（OKR → Sprint → Retro）",
+  "domain": "pm-execution",
+  "command": "pm-execute",
+  "entry": "mode",
+  "nodes": {
+    "mode": {
+      "type": "choice",
+      "title": "选择执行节点",
+      "options": [
+        {
+          "label": "定 OKR",
+          "next": "okrs"
+        },
+        {
+          "label": "Sprint 计划",
+          "next": "sprint"
+        },
+        {
+          "label": "路线图",
+          "next": "roadmap"
+        },
+        {
+          "label": "利益相关方地图",
+          "next": "stakeholders"
+        },
+        {
+          "label": "发布说明",
+          "next": "release"
+        },
+        {
+          "label": "Retro",
+          "next": "retro"
+        }
+      ]
+    },
+    "okrs": {
+      "type": "skill",
+      "skill": "brainstorm-okrs",
+      "title": "OKRs",
+      "terminal": true
+    },
+    "sprint": {
+      "type": "skill",
+      "skill": "sprint-plan",
+      "title": "Sprint Plan",
+      "next": "retro_opt"
+    },
+    "roadmap": {
+      "type": "skill",
+      "skill": "outcome-roadmap",
+      "title": "Outcome Roadmap",
+      "terminal": true
+    },
+    "stakeholders": {
+      "type": "skill",
+      "skill": "stakeholder-map",
+      "title": "Stakeholder Map",
+      "terminal": true
+    },
+    "release": {
+      "type": "skill",
+      "skill": "release-notes",
+      "title": "Release Notes",
+      "terminal": true
+    },
+    "retro_opt": {
+      "type": "choice",
+      "title": "是否做 Retro？",
+      "options": [
+        {
+          "label": "做 Retro",
+          "next": "retro"
+        },
+        {
+          "label": "结束",
+          "next": "end"
+        }
+      ]
+    },
+    "retro": {
+      "type": "skill",
+      "skill": "retro",
+      "title": "Retrospective",
+      "terminal": true
+    },
+    "end": {
+      "type": "compose",
+      "title": "结束",
+      "terminal": true
+    }
+  }
+}

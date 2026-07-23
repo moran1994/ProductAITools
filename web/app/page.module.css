@@ -1,0 +1,72 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.inner {
+  max-width: 42rem;
+  text-align: left;
+  width: min(100%, 42rem);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 1rem 0 0.85rem;
+  font-weight: 750;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  max-width: 34rem;
+  margin: 0 0 2rem;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.orbit {
+  position: absolute;
+  width: min(70vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(61, 237, 224, 0.22);
+  right: 8%;
+  top: 18%;
+  z-index: -1;
+  animation: spin 48s linear infinite;
+}
+
+.orbit::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brand);
+  top: 8%;
+  left: 48%;
+  box-shadow: 0 0 18px var(--glow);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .orbit {
+    opacity: 0.35;
+    right: -20%;
+  }
+}

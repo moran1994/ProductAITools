@@ -1,0 +1,65 @@
+{
+  "id": "research",
+  "name": "市场与用户研究",
+  "domain": "pm-market-research",
+  "command": "pm-research",
+  "entry": "mode",
+  "nodes": {
+    "mode": {
+      "type": "choice",
+      "title": "研究类型",
+      "options": [
+        {
+          "label": "用户研究包",
+          "next": "users"
+        },
+        {
+          "label": "竞品分析",
+          "next": "comp"
+        },
+        {
+          "label": "反馈情感分析",
+          "next": "sentiment"
+        },
+        {
+          "label": "宏观扫描",
+          "next": "macro"
+        }
+      ]
+    },
+    "users": {
+      "type": "sequence",
+      "title": "用户研究包",
+      "steps": [
+        "user-segmentation",
+        "user-personas",
+        "customer-journey-map",
+        "market-segments"
+      ],
+      "terminal": true
+    },
+    "comp": {
+      "type": "skill",
+      "skill": "competitor-analysis",
+      "title": "竞品分析",
+      "terminal": true
+    },
+    "sentiment": {
+      "type": "skill",
+      "skill": "sentiment-analysis",
+      "title": "情感分析",
+      "terminal": true
+    },
+    "macro": {
+      "type": "sequence",
+      "title": "宏观扫描",
+      "steps": [
+        "pestle-analysis",
+        "porters-five-forces",
+        "swot-analysis",
+        "ansoff-matrix"
+      ],
+      "terminal": true
+    }
+  }
+}

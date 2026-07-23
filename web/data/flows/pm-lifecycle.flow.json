@@ -1,0 +1,48 @@
+{
+  "id": "pm-lifecycle",
+  "name": "PM 全生命周期（流程编排入口）",
+  "domain": "local-meta",
+  "command": "pm",
+  "description": "按产品阶段选择子流程；节点引用其他 flow",
+  "entry": "stage",
+  "nodes": {
+    "stage": {
+      "type": "choice",
+      "title": "你现在处在哪一环？",
+      "options": [
+        {
+          "label": "🔍 发现 / Discovery",
+          "flow": "discover"
+        },
+        {
+          "label": "🎯 战略 / Strategy",
+          "flow": "strategy"
+        },
+        {
+          "label": "📊 研究 / Research",
+          "flow": "research"
+        },
+        {
+          "label": "📝 写 PRD",
+          "flow": "prd"
+        },
+        {
+          "label": "🚀 上市 / Launch",
+          "flow": "launch"
+        },
+        {
+          "label": "⚙️ 执行 / Execution",
+          "flow": "execution"
+        },
+        {
+          "label": "📈 数据 / Analytics",
+          "flow": "analytics"
+        },
+        {
+          "label": "🚢 发版检查 / Ship",
+          "flow": "ship"
+        }
+      ]
+    }
+  }
+}

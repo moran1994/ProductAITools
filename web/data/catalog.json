@@ -1,0 +1,979 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-23T02:44:03.484258+00:00",
+  "counts": {
+    "personal": 72,
+    "builtin": 19,
+    "plugins": 19
+  },
+  "domains": {
+    "pm-product-discovery": {
+      "label": "产品发现",
+      "order": 1
+    },
+    "pm-product-strategy": {
+      "label": "产品战略",
+      "order": 2
+    },
+    "pm-market-research": {
+      "label": "市场研究",
+      "order": 3
+    },
+    "pm-data-analytics": {
+      "label": "数据分析",
+      "order": 4
+    },
+    "pm-go-to-market": {
+      "label": "Go-to-Market",
+      "order": 5
+    },
+    "pm-marketing-growth": {
+      "label": "营销增长",
+      "order": 6
+    },
+    "pm-execution": {
+      "label": "执行交付",
+      "order": 7
+    },
+    "pm-ai-shipping": {
+      "label": "AI Shipping",
+      "order": 8
+    },
+    "pm-toolkit": {
+      "label": "PM工具箱",
+      "order": 9
+    },
+    "local-chatprd": {
+      "label": "本地 PRD",
+      "order": 10
+    },
+    "local-meta": {
+      "label": "元技能 / Skill OS",
+      "order": 11
+    },
+    "cursor-builtin": {
+      "label": "Cursor 内置",
+      "order": 12
+    },
+    "unknown": {
+      "label": "未分类",
+      "order": 99
+    }
+  },
+  "skills": [
+    {
+      "id": "ab-test-analysis",
+      "name": "ab-test-analysis",
+      "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to ship a variant.",
+      "domain": "pm-data-analytics",
+      "domain_label": "数据分析",
+      "path": "/Users/mengfangbian/.cursor/skills/ab-test-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/ab-test-analysis"
+    },
+    {
+      "id": "analyze-feature-requests",
+      "name": "analyze-feature-requests",
+      "description": "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk. Use when reviewing customer feature requests, triaging a backlog, or making prioritization decisions.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/analyze-feature-requests/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/analyze-feature-requests"
+    },
+    {
+      "id": "ansoff-matrix",
+      "name": "ansoff-matrix",
+      "description": "Generate an Ansoff Matrix analysis mapping growth strategies across market penetration, market development, product development, and diversification. Use when considering growth options, planning market expansion, or evaluating strategic growth paths.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/ansoff-matrix/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/ansoff-matrix"
+    },
+    {
+      "id": "beachhead-segment",
+      "name": "beachhead-segment",
+      "description": "Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy.",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/beachhead-segment/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/beachhead-segment"
+    },
+    {
+      "id": "brainstorm-experiments-existing",
+      "name": "brainstorm-experiments-existing",
+      "description": "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/brainstorm-experiments-existing/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/brainstorm-experiments-existing"
+    },
+    {
+      "id": "brainstorm-experiments-new",
+      "name": "brainstorm-experiments-new",
+      "description": "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/brainstorm-experiments-new/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/brainstorm-experiments-new"
+    },
+    {
+      "id": "brainstorm-ideas-existing",
+      "name": "brainstorm-ideas-existing",
+      "description": "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/brainstorm-ideas-existing/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/brainstorm-ideas-existing"
+    },
+    {
+      "id": "brainstorm-ideas-new",
+      "name": "brainstorm-ideas-new",
+      "description": "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives. Use when starting product discovery for a new product, exploring features for a startup idea, or doing initial ideation.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/brainstorm-ideas-new/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/brainstorm-ideas-new"
+    },
+    {
+      "id": "brainstorm-okrs",
+      "name": "brainstorm-okrs",
+      "description": "Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results. Use when setting quarterly OKRs, aligning team goals with company strategy, drafting objectives, or learning how to write effective OKRs.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/brainstorm-okrs/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/brainstorm-okrs"
+    },
+    {
+      "id": "business-model",
+      "name": "business-model",
+      "description": "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/business-model/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/business-model"
+    },
+    {
+      "id": "cohort-analysis",
+      "name": "cohort-analysis",
+      "description": "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user retention by cohort, studying feature adoption over time, investigating churn patterns, or identifying engagement trends.",
+      "domain": "pm-data-analytics",
+      "domain_label": "数据分析",
+      "path": "/Users/mengfangbian/.cursor/skills/cohort-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/cohort-analysis"
+    },
+    {
+      "id": "competitive-battlecard",
+      "name": "competitive-battlecard",
+      "description": "Create sales-ready competitive battlecards comparing your product against a specific competitor — positioning, feature comparison, objection handling, and win/loss patterns. Use when preparing sales teams, creating competitive materials, or responding to 'why not competitor X?'",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/competitive-battlecard/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/competitive-battlecard"
+    },
+    {
+      "id": "competitor-analysis",
+      "name": "competitor-analysis",
+      "description": "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/competitor-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/competitor-analysis"
+    },
+    {
+      "id": "create-prd",
+      "name": "create-prd",
+      "description": "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/create-prd/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/create-prd"
+    },
+    {
+      "id": "customer-journey-map",
+      "name": "customer-journey-map",
+      "description": "Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/customer-journey-map/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/customer-journey-map"
+    },
+    {
+      "id": "draft-nda",
+      "name": "draft-nda",
+      "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership.",
+      "domain": "pm-toolkit",
+      "domain_label": "PM工具箱",
+      "path": "/Users/mengfangbian/.cursor/skills/draft-nda/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/draft-nda"
+    },
+    {
+      "id": "dummy-dataset",
+      "name": "dummy-dataset",
+      "description": "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/dummy-dataset/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/dummy-dataset"
+    },
+    {
+      "id": "grammar-check",
+      "name": "grammar-check",
+      "description": "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft.",
+      "domain": "pm-toolkit",
+      "domain_label": "PM工具箱",
+      "path": "/Users/mengfangbian/.cursor/skills/grammar-check/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/grammar-check"
+    },
+    {
+      "id": "growth-loops",
+      "name": "growth-loops",
+      "description": "Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, Collaboration, User-Generated, and Referral. Use when designing growth mechanisms, building product-led traction, or understanding how growth loops work.",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/growth-loops/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/growth-loops"
+    },
+    {
+      "id": "gtm-motions",
+      "name": "gtm-motions",
+      "description": "Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Community, Partners, ABM, and PLG. Use when selecting marketing channels, choosing between inbound and outbound strategy, or planning cross-channel campaigns.",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/gtm-motions/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/gtm-motions"
+    },
+    {
+      "id": "gtm-strategy",
+      "name": "gtm-strategy",
+      "description": "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market.",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/gtm-strategy/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/gtm-strategy"
+    },
+    {
+      "id": "ideal-customer-profile",
+      "name": "ideal-customer-profile",
+      "description": "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs. Use when defining your ICP, analyzing PMF survey data, or understanding who your best customers are.",
+      "domain": "pm-go-to-market",
+      "domain_label": "Go-to-Market",
+      "path": "/Users/mengfangbian/.cursor/skills/ideal-customer-profile/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/ideal-customer-profile"
+    },
+    {
+      "id": "identify-assumptions-existing",
+      "name": "identify-assumptions-existing",
+      "description": "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/identify-assumptions-existing/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/identify-assumptions-existing"
+    },
+    {
+      "id": "identify-assumptions-new",
+      "name": "identify-assumptions-new",
+      "description": "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/identify-assumptions-new/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/identify-assumptions-new"
+    },
+    {
+      "id": "intended-vs-implemented",
+      "name": "intended-vs-implemented",
+      "description": "The method for finding the gap between what a system is supposed to do and what the code actually does — the class of bug generic scanners miss because they have no model of intent. Defines what counts as documented intent, what counts as implementation evidence, which mismatches matter, and how to avoid hand-wavy findings. Use when auditing AI-built code, reviewing access control against documented permissions, or checking whether a codebase matches its own documentation.",
+      "domain": "pm-ai-shipping",
+      "domain_label": "AI Shipping",
+      "path": "/Users/mengfangbian/.cursor/skills/intended-vs-implemented/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/intended-vs-implemented"
+    },
+    {
+      "id": "interview-script",
+      "name": "interview-script",
+      "description": "Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/interview-script/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/interview-script"
+    },
+    {
+      "id": "job-stories",
+      "name": "job-stories",
+      "description": "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/job-stories/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/job-stories"
+    },
+    {
+      "id": "lean-canvas",
+      "name": "lean-canvas",
+      "description": "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/lean-canvas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/lean-canvas"
+    },
+    {
+      "id": "market-segments",
+      "name": "market-segments",
+      "description": "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/market-segments/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/market-segments"
+    },
+    {
+      "id": "market-sizing",
+      "name": "market-sizing",
+      "description": "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/market-sizing/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/market-sizing"
+    },
+    {
+      "id": "marketing-ideas",
+      "name": "marketing-ideas",
+      "description": "Generate 5 creative, cost-effective marketing ideas with channels, messaging, and engagement rationale. Use when brainstorming marketing campaigns, planning product promotion, or looking for creative marketing tactics.",
+      "domain": "pm-marketing-growth",
+      "domain_label": "营销增长",
+      "path": "/Users/mengfangbian/.cursor/skills/marketing-ideas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/marketing-ideas"
+    },
+    {
+      "id": "metrics-dashboard",
+      "name": "metrics-dashboard",
+      "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/metrics-dashboard/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/metrics-dashboard"
+    },
+    {
+      "id": "monetization-strategy",
+      "name": "monetization-strategy",
+      "description": "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/monetization-strategy/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/monetization-strategy"
+    },
+    {
+      "id": "north-star-metric",
+      "name": "north-star-metric",
+      "description": "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation. Classify the business game (Attention, Transaction, Productivity) and validate against 7 criteria for an effective North Star. Use when choosing a North Star Metric, setting up a metrics framework, learning about the North Star Framework, or deciding what to measure.",
+      "domain": "pm-marketing-growth",
+      "domain_label": "营销增长",
+      "path": "/Users/mengfangbian/.cursor/skills/north-star-metric/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/north-star-metric"
+    },
+    {
+      "id": "opportunity-solution-tree",
+      "name": "opportunity-solution-tree",
+      "description": "Build an Opportunity Solution Tree (OST) to structure product discovery — map a desired outcome to opportunities, solutions, and experiments. Based on Teresa Torres' Continuous Discovery Habits. Use when structuring discovery work, mapping opportunities to solutions, or deciding what to build next.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/opportunity-solution-tree/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/opportunity-solution-tree"
+    },
+    {
+      "id": "outcome-roadmap",
+      "name": "outcome-roadmap",
+      "description": "Transform an output-focused roadmap into an outcome-focused one that communicates strategic intent. Rewrites initiatives as outcome statements reflecting user and business impacts. Use when shifting to outcome roadmaps, making a roadmap more strategic, or rewriting feature lists as outcomes.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/outcome-roadmap/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/outcome-roadmap"
+    },
+    {
+      "id": "pestle-analysis",
+      "name": "pestle-analysis",
+      "description": "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing the macro environment, doing strategic planning, or evaluating external factors affecting your business.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/pestle-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/pestle-analysis"
+    },
+    {
+      "id": "pm-workflow",
+      "name": "pm-workflow",
+      "description": "Execute Product Management skills as node-based step workflows (discover, strategy, PRD, launch, etc.). Use when the user wants a PM process by steps, says /pm, /pm-discover, /pm-next, continue the flow, or asks not to use scattered one-off PM skills. Always load the flow graph and advance node by node.",
+      "domain": "local-meta",
+      "domain_label": "元技能 / Skill OS",
+      "path": "/Users/mengfangbian/.cursor/skills/pm-workflow/SKILL.md",
+      "source": "local",
+      "ref": "node://skill/pm-workflow"
+    },
+    {
+      "id": "porters-five-forces",
+      "name": "porters-five-forces",
+      "description": "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/porters-five-forces/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/porters-five-forces"
+    },
+    {
+      "id": "positioning-ideas",
+      "name": "positioning-ideas",
+      "description": "Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy.",
+      "domain": "pm-marketing-growth",
+      "domain_label": "营销增长",
+      "path": "/Users/mengfangbian/.cursor/skills/positioning-ideas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/positioning-ideas"
+    },
+    {
+      "id": "pre-mortem",
+      "name": "pre-mortem",
+      "description": "Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants (unspoken worries), then classifies as launch-blocking, fast-follow, or track. Use when preparing for launch, stress-testing a product plan, or identifying what could go wrong.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/pre-mortem/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/pre-mortem"
+    },
+    {
+      "id": "pricing-strategy",
+      "name": "pricing-strategy",
+      "description": "Analyze and design pricing strategies including pricing models, competitive pricing analysis, willingness-to-pay estimation, and price elasticity. Use when setting prices, evaluating pricing models, preparing for a pricing change, or comparing freemium vs paid approaches.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/pricing-strategy/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/pricing-strategy"
+    },
+    {
+      "id": "prioritization-frameworks",
+      "name": "prioritization-frameworks",
+      "description": "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization approaches work.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/prioritization-frameworks/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/prioritization-frameworks"
+    },
+    {
+      "id": "prioritize-assumptions",
+      "name": "prioritize-assumptions",
+      "description": "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/prioritize-assumptions/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/prioritize-assumptions"
+    },
+    {
+      "id": "prioritize-features",
+      "name": "prioritize-features",
+      "description": "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/prioritize-features/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/prioritize-features"
+    },
+    {
+      "id": "privacy-policy",
+      "name": "privacy-policy",
+      "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance.",
+      "domain": "pm-toolkit",
+      "domain_label": "PM工具箱",
+      "path": "/Users/mengfangbian/.cursor/skills/privacy-policy/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/privacy-policy"
+    },
+    {
+      "id": "product-name",
+      "name": "product-name",
+      "description": "Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audience. Use when naming a new product, rebranding, or exploring product name ideas.",
+      "domain": "pm-marketing-growth",
+      "domain_label": "营销增长",
+      "path": "/Users/mengfangbian/.cursor/skills/product-name/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/product-name"
+    },
+    {
+      "id": "product-strategy",
+      "name": "product-strategy",
+      "description": "Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility. Use when building a product strategy, creating a strategic plan, or defining product direction.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/product-strategy/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/product-strategy"
+    },
+    {
+      "id": "product-vision",
+      "name": "product-vision",
+      "description": "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/product-vision/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/product-vision"
+    },
+    {
+      "id": "release-notes",
+      "name": "release-notes",
+      "description": "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/release-notes/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/release-notes"
+    },
+    {
+      "id": "retro",
+      "name": "retro",
+      "description": "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/retro/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/retro"
+    },
+    {
+      "id": "review-resume",
+      "name": "review-resume",
+      "description": "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact.",
+      "domain": "pm-toolkit",
+      "domain_label": "PM工具箱",
+      "path": "/Users/mengfangbian/.cursor/skills/review-resume/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/review-resume"
+    },
+    {
+      "id": "sentiment-analysis",
+      "name": "sentiment-analysis",
+      "description": "Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfaction insights. Use when analyzing user feedback at scale, running sentiment analysis on reviews or surveys, or identifying satisfaction patterns.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/sentiment-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/sentiment-analysis"
+    },
+    {
+      "id": "shipping-artifacts",
+      "name": "shipping-artifacts",
+      "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: emails, scheduled work, SEO, and embedded agents/automation. Defines what each doc must capture and how a reviewer or auditor uses it. Use when documenting a codebase for handoff, mapping user journeys and trust-boundary crossings, planning test coverage, or preparing for a security or performance audit.",
+      "domain": "pm-ai-shipping",
+      "domain_label": "AI Shipping",
+      "path": "/Users/mengfangbian/.cursor/skills/shipping-artifacts/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/shipping-artifacts"
+    },
+    {
+      "id": "skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "domain": "local-meta",
+      "domain_label": "元技能 / Skill OS",
+      "path": "/Users/mengfangbian/.cursor/skills/skill-creator/SKILL.md",
+      "source": "local",
+      "ref": "node://skill/skill-creator"
+    },
+    {
+      "id": "skill-os",
+      "name": "skill-os",
+      "description": "Manage, recognize, and apply Cursor skills via the Skill OS catalog. Use whenever the user asks which skills they have, how to find/route a skill, install/sync/list skills, or when choosing among many PM/product skills. Prefer this over guessing scattered skill names.",
+      "domain": "local-meta",
+      "domain_label": "元技能 / Skill OS",
+      "path": "/Users/mengfangbian/.cursor/skills/skill-os/SKILL.md",
+      "source": "local",
+      "ref": "node://skill/skill-os"
+    },
+    {
+      "id": "sprint-plan",
+      "name": "sprint-plan",
+      "description": "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/sprint-plan/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/sprint-plan"
+    },
+    {
+      "id": "sql-queries",
+      "name": "sql-queries",
+      "description": "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business questions into queries.",
+      "domain": "pm-data-analytics",
+      "domain_label": "数据分析",
+      "path": "/Users/mengfangbian/.cursor/skills/sql-queries/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/sql-queries"
+    },
+    {
+      "id": "stakeholder-map",
+      "name": "stakeholder-map",
+      "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/stakeholder-map/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/stakeholder-map"
+    },
+    {
+      "id": "startup-canvas",
+      "name": "startup-canvas",
+      "description": "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/startup-canvas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/startup-canvas"
+    },
+    {
+      "id": "strategy-red-team",
+      "name": "strategy-red-team",
+      "description": "Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions before reality does. Steelmans then attacks each claim, ranks failure modes by impact × likelihood × cheapness-to-test, and returns the cheapest test and kill criteria for each. Use when stress-testing a plan, pressure-testing a strategy, challenging assumptions, or preparing a doc for executive review.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/strategy-red-team/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/strategy-red-team"
+    },
+    {
+      "id": "summarize-interview",
+      "name": "summarize-interview",
+      "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries.",
+      "domain": "pm-product-discovery",
+      "domain_label": "产品发现",
+      "path": "/Users/mengfangbian/.cursor/skills/summarize-interview/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/summarize-interview"
+    },
+    {
+      "id": "summarize-meeting",
+      "name": "summarize-meeting",
+      "description": "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/summarize-meeting/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/summarize-meeting"
+    },
+    {
+      "id": "swot-analysis",
+      "name": "swot-analysis",
+      "description": "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/swot-analysis/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/swot-analysis"
+    },
+    {
+      "id": "test-scenarios",
+      "name": "test-scenarios",
+      "description": "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes. Use when writing QA test cases, creating test plans, defining acceptance tests, or preparing for feature validation.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/test-scenarios/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/test-scenarios"
+    },
+    {
+      "id": "user-personas",
+      "name": "user-personas",
+      "description": "Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey data, creating user profiles from research, or segmenting users for product decisions.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/user-personas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/user-personas"
+    },
+    {
+      "id": "user-segmentation",
+      "name": "user-segmentation",
+      "description": "Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct user segments. Use when segmenting a user base, analyzing diverse user feedback, or building a segmentation model.",
+      "domain": "pm-market-research",
+      "domain_label": "市场研究",
+      "path": "/Users/mengfangbian/.cursor/skills/user-segmentation/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/user-segmentation"
+    },
+    {
+      "id": "user-stories",
+      "name": "user-stories",
+      "description": "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/user-stories/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/user-stories"
+    },
+    {
+      "id": "value-prop-statements",
+      "name": "value-prop-statements",
+      "description": "Generate value proposition statements for marketing, sales, and onboarding from existing value propositions. Use when writing marketing copy, creating sales messaging, or crafting onboarding messages.",
+      "domain": "pm-marketing-growth",
+      "domain_label": "营销增长",
+      "path": "/Users/mengfangbian/.cursor/skills/value-prop-statements/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/value-prop-statements"
+    },
+    {
+      "id": "value-proposition",
+      "name": "value-proposition",
+      "description": "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product.",
+      "domain": "pm-product-strategy",
+      "domain_label": "产品战略",
+      "path": "/Users/mengfangbian/.cursor/skills/value-proposition/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/value-proposition"
+    },
+    {
+      "id": "write-prd",
+      "name": "write-prd",
+      "description": "Write and refine Product Requirements Documents (PRD) in Chinese B2B/SaaS style. Use when the user asks to write a PRD, product requirements, feature spec, user stories, acceptance criteria, field definitions, or 产品需求文档/功能详设/需求说明.",
+      "domain": "local-chatprd",
+      "domain_label": "本地 PRD",
+      "path": "/Users/mengfangbian/.cursor/skills/write-prd/SKILL.md",
+      "source": "local",
+      "ref": "node://skill/write-prd"
+    },
+    {
+      "id": "wwas",
+      "name": "wwas",
+      "description": "Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items with strategic context. Use when writing structured backlog items, breaking features into work items, or using the WWA format.",
+      "domain": "pm-execution",
+      "domain_label": "执行交付",
+      "path": "/Users/mengfangbian/.cursor/skills/wwas/SKILL.md",
+      "source": "pm-skills",
+      "ref": "node://skill/wwas"
+    }
+  ],
+  "builtin_skills": [
+    {
+      "id": "automate",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/automate/SKILL.md"
+    },
+    {
+      "id": "babysit",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/babysit/SKILL.md"
+    },
+    {
+      "id": "canvas",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/canvas/SKILL.md"
+    },
+    {
+      "id": "create-hook",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/create-hook/SKILL.md"
+    },
+    {
+      "id": "create-rule",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/create-rule/SKILL.md"
+    },
+    {
+      "id": "create-skill",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/create-skill/SKILL.md"
+    },
+    {
+      "id": "create-subagent",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/create-subagent/SKILL.md"
+    },
+    {
+      "id": "loop",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/loop/SKILL.md"
+    },
+    {
+      "id": "migrate-to-skills",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/migrate-to-skills/SKILL.md"
+    },
+    {
+      "id": "onboard",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/onboard/SKILL.md"
+    },
+    {
+      "id": "review",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/review/SKILL.md"
+    },
+    {
+      "id": "review-bugbot",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/review-bugbot/SKILL.md"
+    },
+    {
+      "id": "review-security",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/review-security/SKILL.md"
+    },
+    {
+      "id": "sdk",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/sdk/SKILL.md"
+    },
+    {
+      "id": "shell",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/shell/SKILL.md"
+    },
+    {
+      "id": "split-to-prs",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/split-to-prs/SKILL.md"
+    },
+    {
+      "id": "statusline",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/statusline/SKILL.md"
+    },
+    {
+      "id": "update-cli-config",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/update-cli-config/SKILL.md"
+    },
+    {
+      "id": "update-cursor-settings",
+      "domain": "cursor-builtin",
+      "path": "/Users/mengfangbian/.cursor/skills-cursor/update-cursor-settings/SKILL.md"
+    }
+  ],
+  "plugin_skills": [
+    {
+      "id": "docs-canvas",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/docs-canvas/02c03a9deddad3aef581da053cecf9603b8caba1/skills/docs-canvas/SKILL.md",
+      "plugin_path": "cursor-public/docs-canvas/02c03a9deddad3aef581da053cecf9603b8caba1/skills/docs-canvas/SKILL.md"
+    },
+    {
+      "id": "figma-use-motion",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-motion/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-motion/SKILL.md"
+    },
+    {
+      "id": "figma-use-slides",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-slides/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-slides/SKILL.md"
+    },
+    {
+      "id": "figma-generate-design",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-design/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-design/SKILL.md"
+    },
+    {
+      "id": "figma-implement-motion",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-implement-motion/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-implement-motion/SKILL.md"
+    },
+    {
+      "id": "figma-generate-diagram",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-diagram/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-diagram/SKILL.md"
+    },
+    {
+      "id": "figma-create-new-file",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-create-new-file/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-create-new-file/SKILL.md"
+    },
+    {
+      "id": "figma-swiftui",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-swiftui/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-swiftui/SKILL.md"
+    },
+    {
+      "id": "figma-generate-library",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-library/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-generate-library/SKILL.md"
+    },
+    {
+      "id": "figma-use",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use/SKILL.md"
+    },
+    {
+      "id": "figma-use-figjam",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-figjam/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-use-figjam/SKILL.md"
+    },
+    {
+      "id": "figma-code-connect",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-code-connect/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-code-connect/SKILL.md"
+    },
+    {
+      "id": "figma-design-to-code",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-design-to-code/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-design-to-code/SKILL.md"
+    },
+    {
+      "id": "video-interaction-mapper",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/workflow-skills/video-interaction-mapper/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/workflow-skills/video-interaction-mapper/SKILL.md"
+    },
+    {
+      "id": "generate-project-plan",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/workflow-skills/generate-project-plan/SKILL.md",
+      "plugin_path": "cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/workflow-skills/generate-project-plan/SKILL.md"
+    },
+    {
+      "id": "update-prd",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/update-prd/SKILL.md",
+      "plugin_path": "cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/update-prd/SKILL.md"
+    },
+    {
+      "id": "implement-from-prd",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/implement-from-prd/SKILL.md",
+      "plugin_path": "cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/implement-from-prd/SKILL.md"
+    },
+    {
+      "id": "check-prd-alignment",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/check-prd-alignment/SKILL.md",
+      "plugin_path": "cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/check-prd-alignment/SKILL.md"
+    },
+    {
+      "id": "write-prd",
+      "path": "/Users/mengfangbian/.cursor/plugins/cache/cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/write-prd/SKILL.md",
+      "plugin_path": "cursor-public/chatprd/03d7c257859d7c79fb73b70964a05500dbf386e9/skills/write-prd/SKILL.md"
+    }
+  ]
+}

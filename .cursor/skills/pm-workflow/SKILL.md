@@ -1,13 +1,13 @@
 ---
 name: pm-workflow
 description: >-
-  Execute Product Management skills as node-based step workflows (discover,
-  strategy, PRD, launch, etc.). Use when the user wants a PM process by steps,
+  产品经理AI空间站的节点化 PM 流程执行器（discover / strategy / PRD / launch 等）。
+  Use when the user wants a PM process by steps, mentions 产品经理AI空间站,
   says /pm, /pm-discover, /pm-next, continue the flow, or asks not to use
   scattered one-off PM skills. Always load the flow graph and advance node by node.
 ---
 
-# PM Workflow — 节点化执行器（系统级）
+# 产品经理AI空间站 — 节点化执行器（系统级）
 
 运行时根目录：`~/.cursor/skill-os`（跨项目共享状态与流程图）。
 

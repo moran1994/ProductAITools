@@ -1,13 +1,13 @@
 ---
 name: skill-os
 description: >-
-  Manage, recognize, and apply Cursor skills via the Skill OS catalog.
+  产品经理AI空间站（Skill OS）：管理、识别、应用 Cursor skills。
   Use whenever the user asks which skills they have, how to find/route a skill,
-  install/sync/list skills, or when choosing among many PM/product skills.
-  Prefer this over guessing scattered skill names.
+  install/sync/list skills, mentions 产品经理AI空间站, or when choosing among
+  many PM/product skills. Prefer this over guessing scattered skill names.
 ---
 
-# Skill OS — 管理 / 识别 / 应用（系统级）
+# 产品经理AI空间站 — 管理 / 识别 / 应用（系统级）
 
 ## 系统位置（跨项目）
 
