@@ -1,4 +1,13 @@
 {
-  "active": null,
+  "active": {
+    "flow_id": "discover",
+    "flow_name": "产品发现全流程",
+    "node_id": "context",
+    "status": "running",
+    "vars": {},
+    "completed_nodes": [],
+    "started_at": "2026-07-23T03:45:26.045541+00:00",
+    "artifacts": []
+  },
   "history": []
 }
