@@ -14,27 +14,76 @@ export type RunNodeRequest = {
 
 function buildSystemPrompt(req: RunNodeRequest, skillBody?: string): string {
   const skill = resolveSkill(req.node, req.vars);
-  const skillLabel = Array.isArray(skill) ? skill.join(", ") : skill || "(none)";
+  const skillLabel = Array.isArray(skill) ? skill.join(", ") : skill || "（无）";
+  const typeNames: Record<string, string> = {
+    gate: "门禁",
+    skill: "技能",
+    choice: "选择",
+    router: "路由",
+    compose: "汇总",
+    sequence: "顺序",
+    info: "说明",
+  };
+  const typeLabel = typeNames[req.node.type] || req.node.type;
+  const askBlock = req.node.ask?.length
+    ? `待澄清问题：\n${req.node.ask.map((q, i) => `${i + 1}. ${q}`).join("\n")}`
+    : "";
+  const optionsBlock = req.node.options?.length
+    ? `可选选项：\n${req.node.options
+        .map((o, i) => {
+          const target = o.next || o.flow || o.node_skill || "";
+          return `${i + 1}. ${o.label}${target ? ` → ${target}` : ""}`;
+        })
+        .join("\n")}`
+    : "";
 
   return `你是「产品经理AI空间站」的执行引擎。按节点类型完成当前步骤，输出结构清晰的中文结果。
 
-流程：${req.flowName} (${req.flowId})
-节点：${req.nodeId} — ${req.node.title || req.node.type}
-类型：${req.node.type}
-关联 skill：${skillLabel}
+流程：${req.flowName}（${req.flowId}）
+节点：${req.nodeId} — ${req.node.title || typeLabel}
+类型：${typeLabel}
+关联技能：${skillLabel}
 变量：${JSON.stringify(req.vars)}
 主题：${req.topic || "（未指定）"}
+${askBlock ? `\n${askBlock}` : ""}
+${optionsBlock ? `\n${optionsBlock}` : ""}
 
 规则：
-- type=gate：根据 ask 列表向用户澄清，或在已有信息足够时总结上下文并给出可进入下一步的结论。
-- type=skill：严格遵循下方 skill 说明执行，给出可交付产出。
-- type=choice/router：列出选项并给出推荐，等待用户选择。
-- type=compose：汇总前序产出，生成文档草稿。
-- type=sequence：按步骤技能依次给出简要产出。
-- 若有 checkpoint，结尾用「【检查点】」列出需用户确认的问题。
+- 类型=门禁：根据 ask 列表向用户澄清，或在已有信息足够时总结上下文并给出可进入下一步的结论。
+- 类型=技能：严格遵循下方技能说明执行，给出可交付产出；必须紧扣主题与变量，不要另起无关产品。
+- 类型=选择/路由：必须基于上方「可选选项」列出并给出推荐（说明理由），等待用户选择；不要声称没有选项。
+- 类型=汇总：汇总前序产出，生成文档草稿。
+- 类型=顺序：按步骤技能依次给出简要产出。
+- 若有检查点，结尾用「【检查点】」列出需用户确认的问题。
 - 不要编造无法核实的数据；假设处请标注。
 
-${skillBody ? `--- SKILL 说明 ---\n${skillBody}\n--- END ---` : ""}`;
+${skillBody ? `--- 技能说明 ---\n${skillBody}\n--- 结束 ---` : ""}`;
+}
+
+function buildUserMessage(req: RunNodeRequest): string {
+  const parts: string[] = [];
+  if (req.userMessage) parts.push(req.userMessage);
+  else if (req.node.ask?.length) {
+    parts.push(`请处理本节点。已知信息：${JSON.stringify(req.vars)}。待澄清：${req.node.ask.join(" / ")}`);
+  } else {
+    parts.push(`请执行节点「${req.node.title || req.nodeId}」。`);
+  }
+
+  if (req.node.options?.length) {
+    parts.push(
+      "本节点可选选项（请基于这些选项推荐，不要说没有选项）：\n" +
+        req.node.options
+          .map((o, i) => {
+            const target = o.next || o.flow || o.node_skill || "";
+            return `${i + 1}. ${o.label}${target ? ` → ${target}` : ""}`;
+          })
+          .join("\n")
+    );
+  }
+  if (req.node.ask?.length && req.userMessage) {
+    parts.push(`参考问题：${req.node.ask.join(" / ")}`);
+  }
+  return parts.join("\n\n");
 }
 
 export async function callLLM(req: RunNodeRequest, skillBody?: string): Promise<string> {
@@ -51,11 +100,7 @@ export async function callLLM(req: RunNodeRequest, skillBody?: string): Promise<
     ...(req.history || []).map((h) => ({ role: h.role, content: h.content })),
     {
       role: "user",
-      content:
-        req.userMessage ||
-        (req.node.ask?.length
-          ? `请处理本节点。已知信息：${JSON.stringify(req.vars)}。待澄清：${req.node.ask.join(" / ")}`
-          : `请执行节点「${req.node.title || req.nodeId}」。`),
+      content: buildUserMessage(req),
     },
   ];
 

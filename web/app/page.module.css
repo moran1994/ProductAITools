@@ -2,48 +2,48 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 2rem;
+  padding: clamp(2.5rem, 6vw, 5rem);
 }
 
 .inner {
-  max-width: 42rem;
+  max-width: 46rem;
   text-align: left;
-  width: min(100%, 42rem);
+  width: min(100%, 46rem);
 }
 
 .brand {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 7vw, 4.4rem);
-  line-height: 1.02;
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 1.06;
   letter-spacing: -0.03em;
-  margin: 1rem 0 0.85rem;
+  margin: 1.25rem 0 1.1rem;
   font-weight: 750;
+  color: var(--ink);
 }
 
 .lead {
   color: var(--muted);
-  font-size: 1.125rem;
-  line-height: 1.55;
-  max-width: 34rem;
-  margin: 0 0 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 36rem;
+  margin: 0 0 2.5rem;
 }
 
 .cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .orbit {
   position: absolute;
-  width: min(70vw, 520px);
+  width: min(70vw, 560px);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid rgba(61, 237, 224, 0.22);
+  border: 1px solid rgba(46, 230, 216, 0.28);
   right: 8%;
-  top: 18%;
+  top: 16%;
   z-index: -1;
-  animation: spin 48s linear infinite;
 }
 
 .orbit::before {
@@ -55,18 +55,11 @@
   background: var(--brand);
   top: 8%;
   left: 48%;
-  box-shadow: 0 0 18px var(--glow);
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @media (max-width: 720px) {
   .orbit {
     opacity: 0.35;
-    right: -20%;
+    right: -24%;
   }
 }

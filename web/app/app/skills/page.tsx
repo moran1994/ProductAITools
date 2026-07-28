@@ -5,9 +5,9 @@ export default function SkillsPage() {
   const byDomain = skillsByDomain();
   return (
     <div className="rise">
-      <p className="pill">Skills</p>
+      <p className="pill">技能</p>
       <h1 className={styles.title}>技能星图</h1>
-      <p className="muted">按域浏览空间站可用的 PM skills；流程节点会引用它们并由 LLM 执行。</p>
+      <p className="muted">按域浏览空间站可用的产品技能；流程节点会引用它们并由大模型执行。</p>
       <div className={styles.domains}>
         {Object.entries(byDomain).map(([domain, skills]) => (
           <section key={domain} className={`panel ${styles.section}`}>

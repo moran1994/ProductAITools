@@ -6,7 +6,7 @@ export default function FlowsPage() {
   const flows = listFlows();
   return (
     <div className="rise">
-      <p className="pill">Flows</p>
+      <p className="pill">流程</p>
       <h1 className={styles.title}>流程轨道</h1>
       <p className={`muted ${styles.sub}`}>共 {flows.length} 条节点化流程，点击进入推进器。</p>
       <div className={styles.grid}>
@@ -15,7 +15,7 @@ export default function FlowsPage() {
             <span className={styles.cmd}>/{f.command || f.id}</span>
             <strong>{f.name}</strong>
             <span className="muted">
-              {f.domain} · {f.node_count} nodes
+              {f.domain} · {f.node_count} 个节点
             </span>
           </Link>
         ))}

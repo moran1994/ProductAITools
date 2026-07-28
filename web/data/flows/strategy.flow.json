@@ -44,11 +44,11 @@
       "options": [
         {
           "label": "商业模式",
-          "flow": "business-model"
+          "node_skill": "business-model"
         },
         {
-          "label": "宏观扫描",
-          "flow": "market-scan"
+          "label": "宏观扫描（PESTLE）",
+          "node_skill": "pestle-analysis"
         },
         {
           "label": "OKR",

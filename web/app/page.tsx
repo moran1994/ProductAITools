@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className={`space-bg ${styles.hero}`}>
       <div className={styles.orbit} aria-hidden />
       <div className={`${styles.inner} rise`}>
-        <p className="pill">Product AI Dock</p>
+        <p className="pill">产品 AI 空间站</p>
         <h1 className={styles.brand}>产品经理AI空间站</h1>
         <p className={styles.lead}>
           把发现、战略、PRD、上市做成可逐步推进的轨道。接上 LLM，按节点执行，而不是零散提问。

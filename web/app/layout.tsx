@@ -22,8 +22,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className={`${syne.variable} ${plex.variable}`}>
+    <html lang="zh-CN" className={`${syne.variable} ${plex.variable}`} suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         style={
           {
             ["--font-display" as string]: "var(--font-syne), system-ui, sans-serif",

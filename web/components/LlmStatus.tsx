@@ -15,12 +15,12 @@ export function LlmStatus() {
       .catch(() => setInfo({ configured: false, model: "-", baseUrl: "-" }));
   }, []);
 
-  if (!info) return <p className="muted">检测 LLM 配置中…</p>;
+  if (!info) return <p className="muted">检测大模型配置中…</p>;
 
   return (
     <div className={`panel ${styles.box}`}>
       <span className={info.configured ? styles.ok : styles.warn}>
-        {info.configured ? "LLM 已连接" : "LLM 未配置"}
+        {info.configured ? "大模型已连接" : "大模型未配置"}
       </span>
       <span className="muted">
         {info.model} · {info.baseUrl}
